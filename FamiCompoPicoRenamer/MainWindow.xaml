@@ -1,0 +1,25 @@
+﻿<Window x:Class="FamiCompoPicoRenamer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FamiCompoPicoRenamer"
+        mc:Ignorable="d"
+        Title="Fami Compo Pico Renamer Tool" WindowStyle="ToolWindow" Width="400" SizeToContent="Height">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <StackPanel Margin="5" VerticalAlignment="Top">
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Folder with the NSF files and the entry list:"/>
+        <DockPanel VerticalAlignment="Top" Margin="0,2">
+            <Button x:Name="DirectoryButton" Content="..." VerticalAlignment="Top" HorizontalAlignment="Right" Width="27" Style="{DynamicResource WinTenButton}" Click="DirectoryButton_Click" DockPanel.Dock="Right" Margin="2,0,0,0" TabIndex="101"/>
+            <TextBox x:Name="PathTextBox" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,2,0" TabIndex="100"/>
+        </DockPanel>
+
+        <Button x:Name="StartButton" Content="Go go go!" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Style="{DynamicResource WinTenButton}" Click="StartButton_Click" TabIndex="200"/>
+    </StackPanel>
+</Window>
